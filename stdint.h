@@ -121,13 +121,13 @@ typedef uint64_t  uintmax_t;
 
 // 7.18.2.4 Limits of integer types capable of holding object pointers
 #ifdef _WIN64 // [
-#  define INTPTR_MIN   INT32_MIN
-#  define INTPTR_MAX   INT32_MAX
-#  define UINTPTR_MAX  UINT32_MAX
-#else // _WIN64 ][
 #  define INTPTR_MIN   INT64_MIN
 #  define INTPTR_MAX   INT64_MAX
 #  define UINTPTR_MAX  UINT64_MAX
+#else // _WIN64 ][
+#  define INTPTR_MIN   INT32_MIN
+#  define INTPTR_MAX   INT32_MAX
+#  define UINTPTR_MAX  UINT32_MAX
 #endif // _WIN64 ]
 
 // 7.18.2.5 Limits of greatest-width integer types
