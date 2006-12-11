@@ -18,8 +18,9 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 ///////////////////////////////////////////////////////////////////////////////
 
-// This file is only usable with Microsoft Visual Studio 2003 or later.
-#ifdef _MSC_VER // [
+#ifndef _MSC_VER // [
+#error "Use this header only with Microsoft Visual Studio 2003 or later!"
+#endif // _MSC_VER ]
 
 #ifndef _MSC_INTTYPES_H_ // [
 #define _MSC_INTTYPES_H_
@@ -282,5 +283,3 @@ _inline imaxdiv_t __cdecl imaxdiv(intmax_t numer, intmax_t denom)
 
 
 #endif // _MSC_INTTYPES_H_ ]
-
-#endif // _MSC_VER ]
