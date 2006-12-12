@@ -31,6 +31,7 @@
 
 #include <BaseTsd.h>
 #include <limits.h>
+#include <wchar.h>
 
 // 7.18.1 Integer types
 
