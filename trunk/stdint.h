@@ -47,14 +47,14 @@
 // 7.18.1 Integer types
 
 // 7.18.1.1 Exact-width integer types
-typedef INT8    int8_t;
-typedef INT16   int16_t;
-typedef INT32   int32_t;  // There is LONG32 type defined the same. Should it be used here?
-typedef INT64   int64_t;  // There is LONG64 type defined the same. Should it be used here?
-typedef UINT8   uint8_t;
-typedef UINT16  uint16_t;
-typedef UINT32  uint32_t;  // There are ULONG32 and DWORD32 type defined the same. Should one of them be used here?
-typedef UINT64  uint64_t;  // There are ULONG64 and DWORD64 type defined the same. Should one of them be used here?
+typedef __int8            int8_t;
+typedef __int16           int16_t;
+typedef __int32           int32_t;
+typedef __int64           int64_t;
+typedef unsigned __int8   uint8_t;
+typedef unsigned __int16  uint16_t;
+typedef unsigned __int32  uint32_t;
+typedef unsigned __int64  uint64_t;
 
 // 7.18.1.2 Minimum-width integer types
 typedef int8_t    int_least8_t;
