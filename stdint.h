@@ -30,7 +30,7 @@
 ///////////////////////////////////////////////////////////////////////////////
 
 #ifndef _MSC_VER // [
-#error "Use this header only with Microsoft Visual Studio 2003 or later!"
+#error "Use this header only with Microsoft Visual C++ version 7 or later!"
 #endif // _MSC_VER ]
 
 #ifndef _MSC_STDINT_H_ // [
