@@ -160,18 +160,20 @@ typedef uint64_t  uintmax_t;
 #define SIG_ATOMIC_MIN  INT_MIN
 #define SIG_ATOMIC_MAX  INT_MAX
 
-#ifdef _WIN64 // [
-#  define SIZE_MAX  _UI64_MAX
-#else // _WIN64 ][
-#  define SIZE_MAX  _UI32_MAX
-#endif // _WIN64 ]
+#ifndef SIZE_MAX // [
+#  ifdef _WIN64 // [
+#     define SIZE_MAX  _UI64_MAX
+#  else // _WIN64 ][
+#     define SIZE_MAX  _UI32_MAX
+#  endif // _WIN64 ]
+#endif // SIZE_MAX ]
 
 // WCHAR_MIN and WCHAR_MAX are also defined in <wchar.h>
 #ifndef WCHAR_MIN // [
-#define WCHAR_MIN  0
+#  define WCHAR_MIN  0
 #endif  // WCHAR_MIN ]
 #ifndef WCHAR_MAX // [
-#define WCHAR_MAX  _UI16_MAX
+#  define WCHAR_MAX  _UI16_MAX
 #endif  // WCHAR_MAX ]
 
 #define WINT_MIN  0
