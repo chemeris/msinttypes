@@ -42,7 +42,13 @@
 
 #include <BaseTsd.h>
 #include <limits.h>
-#include <wchar.h>
+#if _MSC_VER >= 1300
+// Include wchar.h only for Visual Studio 2002 or later.
+// If you try using this header inside 'extern "C" {}' VS6 will give you bunch
+// of compiler errors like this:
+//   error C2733: second C linkage of overloaded function 'wmemchr' not allowed
+#  include <wchar.h>
+#endif
 
 // 7.18.1 Integer types
 
