@@ -202,15 +202,15 @@ typedef uint64_t  uintmax_t;
 
 // 7.18.4.1 Macros for minimum-width integer constants
 
-#define INT8_C(val)  val
-#define INT16_C(val) val
-#define INT32_C(val) val##L
+#define INT8_C(val)  val##i8
+#define INT16_C(val) val##i16
+#define INT32_C(val) val##i32
 #define INT64_C(val) val##i64
 
-#define UINT8_C(val)  val
-#define UINT16_C(val) val
-#define UINT32_C(val) val##UL
-#define UINT64_C(val) val##Ui64
+#define UINT8_C(val)  val##ui8
+#define UINT16_C(val) val##ui16
+#define UINT32_C(val) val##ui32
+#define UINT64_C(val) val##ui64
 
 // 7.18.4.2 Macros for greatest-width integer constants
 #define INTMAX_C   INT64_C
