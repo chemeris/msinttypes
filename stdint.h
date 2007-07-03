@@ -104,13 +104,13 @@ typedef uint64_t  uintmax_t;
 #if !defined(__cplusplus) || defined(__STDC_LIMIT_MACROS) // [   See footnote 220 at page 257 and footnote 221 at page 259
 
 // 7.18.2.1 Limits of exact-width integer types
-#define INT8_MIN     _I8_MIN
+#define INT8_MIN     ((int8_t)_I8_MIN)
 #define INT8_MAX     _I8_MAX
-#define INT16_MIN    _I16_MIN
+#define INT16_MIN    ((int16_t)_I16_MIN)
 #define INT16_MAX    _I16_MAX
-#define INT32_MIN    _I32_MIN
+#define INT32_MIN    ((int32_t)_I32_MIN)
 #define INT32_MAX    _I32_MAX
-#define INT64_MIN    _I64_MIN
+#define INT64_MIN    ((int64_t)_I64_MIN)
 #define INT64_MAX    _I64_MAX
 #define UINT8_MAX    _UI8_MAX
 #define UINT16_MAX   _UI16_MAX
