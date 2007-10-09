@@ -51,6 +51,8 @@ typedef struct {
 
 // 7.8.1 Macros for format specifiers
 
+#if !defined(__cplusplus) || defined(__STDC_FORMAT_MACROS) // [   See footnote 185 at page 198
+
 // The fprintf macros for signed integers are:
 #define PRId8       "d"
 #define PRIi8       "i"
@@ -258,6 +260,8 @@ typedef struct {
 #  define SCNxPTR     "lx"
 #  define SCNXPTR     "lX"
 #endif  // _WIN64 ]
+
+#endif // __STDC_FORMAT_MACROS ]
 
 // 7.8.2 Functions for greatest-width integer types
 
