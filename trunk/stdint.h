@@ -42,16 +42,13 @@
 
 #include <limits.h>
 
-// For Visual Studio 6 in C++ mode wrap <wchar.h> include with 'extern "C++" {}'
+// For Visual Studio 6 in C++ mode and for many Visual Studio versions when
+// compiling for ARM we should wrap <wchar.h> include with 'extern "C++" {}'
 // or compiler give many errors like this:
 //   error C2733: second C linkage of overloaded function 'wmemchr' not allowed
-#if (_MSC_VER < 1300) && defined(__cplusplus)
-   extern "C++" {
-#endif 
-#     include <wchar.h>
-#if (_MSC_VER < 1300) && defined(__cplusplus)
-   }
-#endif
+extern "C" {
+#   include <wchar.h>
+}
 
 // Define _W64 macros to mark types changing their size, like intptr_t.
 #ifndef _W64
