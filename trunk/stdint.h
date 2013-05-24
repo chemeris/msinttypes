@@ -41,6 +41,10 @@
 #pragma once
 #endif
 
+#if _MSC_VER >= 1600 // [
+#include <stdint.h>
+#else // ] _MSC_VER >= 1600 [
+
 #include <limits.h>
 
 // For Visual Studio 6 in C++ mode and for many Visual Studio versions when
@@ -244,5 +248,6 @@ typedef uint64_t  uintmax_t;
 
 #endif // __STDC_CONSTANT_MACROS ]
 
+#endif // _MSC_VER >= 1600 ]
 
 #endif // _MSC_STDINT_H_ ]
